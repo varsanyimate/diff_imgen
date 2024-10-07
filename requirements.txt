@@ -1,0 +1,9 @@
+torch
+torchvision
+matplotlib
+numpy
+Pillow
+requests
+tqdm
+scipy
+gdown
