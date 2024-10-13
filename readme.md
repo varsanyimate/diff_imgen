@@ -2,6 +2,11 @@
 
 This project implements a pipeline for training unconditional diffusion models, such as DDPM (Denoising Diffusion Probabilistic Model) or DDIM (Denoising Diffusion Implicit Model) for generating realistic images. The pipeline includes data acquisition, analysis, and preparation steps for two datasets: CelebA and Flowers102.
 
+## Team info:
+
+- Team name: ImGenDiff
+- Team members: Baczó Domonkos Z9EGIM, Varsányi Máté IPBZX7
+
 ## Prerequisites
 
 - Docker

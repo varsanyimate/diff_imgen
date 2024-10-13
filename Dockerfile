@@ -11,6 +11,8 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Install Jupyter Lab
+RUN apt-get update && apt-get install -y nodejs npm
+
 RUN pip install jupyterlab
 
 # Make port 8888 available to the world outside this container
