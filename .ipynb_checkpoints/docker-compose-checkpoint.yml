@@ -1,0 +1,12 @@
+version: '3'
+services:
+  diffusion_model:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - CUDA_VISIBLE_DEVICES=0,1
+    ipc: "host"

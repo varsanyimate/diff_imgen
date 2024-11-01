@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
   diffusion_model:
     build: .
@@ -8,3 +8,14 @@ services:
       - "8888:8888"
     environment:
       - PYTHONUNBUFFERED=1
+      - CUDA_VISIBLE_DEVICES=0,1
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ipc: "host"
+    runtime: nvidia
