@@ -11,12 +11,15 @@ This project implements a pipeline for training unconditional diffusion models, 
 
 - Docker
 - Docker Compose
+- Up to date NVIDIA drivers
+- NVIDIA Container Toolkit
 
 ## Project Structure
 
 ```
 project_directory/
 │
+├── .gitignore
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
@@ -45,7 +48,7 @@ project_directory/
 
 4. In the Jupyter Lab interface, open `diffusion_model_pipeline.ipynb`.
 
-5. Run the cells in the notebook to perform data acquisition, analysis, and preparation.
+5. Run the cells in the notebook to perform data acquisition, analysis, and preparation, and to train the baseline model.
 
 ## Notebook Contents
 
@@ -60,6 +63,11 @@ The `diffusion_model_pipeline.ipynb` notebook contains the following sections:
 
 3. Data Cleansing and Preparation
    - Prepares and cleans the datasets for training
+
+4. Baseline model
+   - Creates a VAE baseline model
+   - Trains the model on the Flowers dataset
+   - Generates some images based on the Flowers dataset 
 
 ## Stopping the Container
 
