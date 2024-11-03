@@ -78,11 +78,11 @@ The pipeline evaluates the quality of generated images using the following metri
     Evaluates the quality and diversity of generated images.
     Higher scores indicate better results, with good models scoring >3 and excellent models scoring >7.
     Ensures generated images contain clear, recognizable objects and are diverse.
-  - Kernel Inception Distance (KID):
+   - Kernel Inception Distance (KID):
     Similar to FID but more reliable with smaller sample sizes.
     Lower scores are preferred, with good models scoring <0.05 and excellent models scoring <0.02.
     Less sensitive to sample size, ideal for smaller datasets.
-  - Diversity Score:
+   - Diversity Score:
     A custom metric calculating the average L2 distance between pairs of generated images.
     Higher values indicate more diversity, helping to detect issues like mode collapse, where generated images lack variety.
 
