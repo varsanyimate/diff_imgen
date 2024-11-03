@@ -69,7 +69,7 @@ The `diffusion_model_pipeline.ipynb` notebook contains the following sections:
    - Trains the model on the Flowers dataset
    - Generates some images based on the Flowers dataset
 5. Evaluation
-The pipeline evaluates the quality of generated images using the following metrics:
+ - The pipeline evaluates the quality of generated images using the following metrics:
    - FID (Fréchet Inception Distance):
     Measures similarity between distributions of generated and real images.
     Lower scores are better, with good models scoring <50, and excellent models scoring <20.
