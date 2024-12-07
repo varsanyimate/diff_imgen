@@ -1,3 +1,6 @@
+.Trash-0/
+__pycache__/
+.ipynb_checkpoints/
 data/
+gifs/
 *.pt
-prepared_datasets/
