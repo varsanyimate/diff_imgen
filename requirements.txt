@@ -13,3 +13,4 @@ torch-fidelity
 einops
 datasets
 tqdm
+gradio
