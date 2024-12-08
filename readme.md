@@ -22,7 +22,6 @@ project_directory/
 ├── data
 ├── gifs
 ├── models
-├── results
 ├── src
 ├── .gitignore
 ├── Dockerfile
