@@ -99,7 +99,7 @@ The `data` directory contains the following:
 2. flowers-102
    - Contains original flowers102 dataset
 
-3. flowers-102
+3. prepared_datasets
    - Contains processed and cleaned datasets
 
 The `gifs` directory contains the gif which the model saves when gradio interface is ran.
@@ -115,7 +115,7 @@ The `training_notebooks` directory contains the all the training notebooks for t
 First run the `diffusion_model_pipeline.ipynb` which downloads, processes the datasets and train and evaluate the baseline model(VAE).
 Then to train the models run the training notebooks in the `training_notebooks` folder.
 This will train the models and save their parameters into the `models` directory.
-Evaluating the models happens in the `training_notebooks/eval_notebook.ipynb`. This evaluates all the models with the above describe metrics and graphs the results.
+Evaluating the models happens in the `training_notebooks/eval_notebook.ipynb`. This evaluates all the models with the above described metrics and graphs the results.
 Finally a gradio interface can be run with running the `training_notebooks/gradio.ipynb`. On the interface a trained model is selectable from the dropdwn.
 When a model is selected it will generate images, plot them and show a gif, demonstrating the diffusion process.
 
