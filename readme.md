@@ -28,6 +28,7 @@ project_directory/
 ├── docker-compose.yml
 ├── requirements.txt
 ├── diffusion_model_pipeline.ipynb
+├── diff_imgen_doc.pdf
 └── README.md
 ```
 
@@ -108,6 +109,8 @@ The `models` directory contains trained models. Results of the training notebook
 The `src` directory contains the python code of the models.
 
 The `training_notebooks` directory contains the all the training notebooks for the models, the evaluation and the gradio interface.
+
+The `diff_imgen_doc.pdf` contains the project documentation.
   
 ## Running the code
 
