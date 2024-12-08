@@ -19,6 +19,11 @@ This project implements a pipeline for training unconditional diffusion models, 
 ```
 project_directory/
 │
+├── data
+├── gifs
+├── models
+├── results
+├── src
 ├── .gitignore
 ├── Dockerfile
 ├── docker-compose.yml
@@ -50,7 +55,7 @@ project_directory/
 
 5. Run the cells in the notebook to perform data acquisition, analysis, and preparation, and to train the baseline model.
 
-## Notebook Contents
+## Contents
 
 The `diffusion_model_pipeline.ipynb` notebook contains the following sections:
 
@@ -69,7 +74,7 @@ The `diffusion_model_pipeline.ipynb` notebook contains the following sections:
    - Trains the model on the Flowers dataset
    - Generates some images based on the Flowers dataset
 5. Evaluation
- - The pipeline evaluates the quality of generated images using the following metrics:
+ - The pipeline evaluates the quality of generated images (VAE) using the following metrics:
    - FID (Fréchet Inception Distance):
     Measures similarity between distributions of generated and real images.
     Lower scores are better, with good models scoring <50, and excellent models scoring <20.
@@ -85,6 +90,35 @@ The `diffusion_model_pipeline.ipynb` notebook contains the following sections:
    - Diversity Score:
     A custom metric calculating the average L2 distance between pairs of generated images.
     Higher values indicate more diversity, helping to detect issues like mode collapse, where generated images lack variety.
+
+The `data` directory contains the following:
+
+1. celeba
+   - Contains original celebA dataset
+
+2. flowers-102
+   - Contains original flowers102 dataset
+
+3. flowers-102
+   - Contains processed and cleaned datasets
+
+The `gifs` directory contains the gif which the model saves when gradio interface is ran.
+
+The `models` directory contains trained models. Results of the training notebooks. 
+
+The `src` directory contains the python code of the models.
+
+The `training_notebooks` directory contains the all the training notebooks for the models, the evaluation and the gradio interface.
+  
+## Running the code
+
+First run the `diffusion_model_pipeline.ipynb` which downloads, processes the datasets and train and evaluate the baseline model(VAE).
+Then to train the models run the training notebooks in the `training_notebooks` folder.
+This will train the models and save their parameters into the `models` directory.
+Evaluating the models happens in the `training_notebooks/eval_notebook.ipynb`. This evaluates all the models with the above describe metrics and graphs the results.
+Finally a gradio interface can be run with running the `training_notebooks/gradio.ipynb`. On the interface a trained model is selectable from the dropdwn.
+When a model is selected it will generate images, plot them and show a gif, demonstrating the diffusion process.
+
 
 ## Stopping the Container
 
